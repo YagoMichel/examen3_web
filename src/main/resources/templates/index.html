@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!-- Template Name: DashCode - HTML, React, Vue, Tailwind Admin Dashboard Template Author: Codeshaper Website: https://codeshaper.net Contact: support@codeshaperbd.net Like: https://www.facebook.com/Codeshaperbd Purchase: https://themeforest.net/item/dashcode-admin-dashboard-template/42600453 License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project. -->
+<html lang="zxx" dir="ltr" class="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Dashcode - HTML Template</title>
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- BEGIN: Theme CSS-->
+  <link rel="stylesheet" href="assets/css/rt-plugins.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <!-- End : Theme CSS-->
+  <script src="assets/js/settings.js" sync></script>
+</head>
+<body class=" font-inter dashcode-app" id="body_class">
+    <!-- [if IE]> <p class="browserupgrade"> You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security. </p> <![endif] -->
+    
+    <header class="bg-white shadow-sm py-4 px-6 flex items-center justify-between dark:bg-slate-800">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+        <img src="assets/images/logo/logo-ipn.svg" alt="Logo" class="h-8 w-8">
+        <span class="text-xl font-semibold text-gray-800"> UPIIZ</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex space-x-7 text-gray-600 font-medium dark:text-[#eee] block group">
+        <a href="#" class="hover:text-primary">Inicio</a>
+        <a href="#" class="hover:text-primary">Listado</a>
+    </nav>
+
+    <!-- Sign In Button -->
+    <div>
+        <a href="#"
+        class="bg-primary text-dark px-4 py-2 rounded-lg hover:bg-primary-dark transition duration-300 dark:text-[#eee]">
+        Iniciar sesión
+        </a>
+    </div>
+    </header>
+    <main class="app-wrapper">
+        <button class="fixed ltr:md:right-[-29px] ltr:right-0 rtl:left-0 rtl:md:left-[-29px] top-1/2 z-[888] translate-y-1/2 bg-slate-800 text-slate-50 dark:bg-slate-700 dark:text-slate-300 cursor-pointer transform rotate-90 flex items-center text-sm font-medium px-2 py-2 shadow-deep ltr:rounded-b rtl:rounded-t" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+      <iconify-icon class="text-slate-50 text-lg animate-spin" icon="material-symbols:settings-outline-rounded"></iconify-icon>
+      <span class="hidden md:inline-block ltr:ml-2 rtl:mr-2">Tema</span>
+    </button>
+
+        <!-- BEGIN: Settings Modal -->
+        <div class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-white dark:bg-slate-800 invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 top-0 ltr:right-0 rtl:left-0 border-none w-96" tabindex="-1" id="offcanvas" aria-labelledby="offcanvas">
+        <div class="offcanvas-header flex items-center justify-between p-4 pt-3 border-b border-b-slate-300">
+            <div>
+            <h3 class="block text-xl font-Inter text-slate-900 font-medium dark:text-[#eee]">
+                Configuración de tema
+            </h3>
+            <p class="block text-sm font-Inter font-light text-[#68768A] dark:text-[#eee]">Personaliza la página a tiempo real</p>
+            </div>
+            <button type="button" class="box-content text-2xl w-4 h-4 p-2 pt-0 -my-5 -mr-2 text-black dark:text-white border-none rounded-none opacity-100 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="offcanvas"><iconify-icon icon="line-md:close"></iconify-icon></button>
+        </div>
+        <div class="offcanvas-body flex-grow overflow-y-auto">
+            <div class="settings-modal">
+            <div class="p-6">
+                <h3 class="mt-4">Temas</h3>
+                <form class="input-area flex items-center space-x-8 rtl:space-x-reverse" id="themeChanger">
+                <div class="input-group flex items-center">
+                    <input type="radio" id="light" name="theme" value="light" class="themeCustomization-checkInput">
+                    <label for="light" class="themeCustomization-checkInput-label">Claro</label>
+                </div>
+                <div class="input-group flex items-center">
+                    <input type="radio" id="dark" name="theme" value="dark" class="themeCustomization-checkInput">
+                    <label for="dark" class="themeCustomization-checkInput-label">Oscuro</label>
+                </div>
+                <div class="input-group flex items-center">
+                    <input type="radio" id="semiDark" name="theme" value="semiDark" class="themeCustomization-checkInput">
+                    <label for="semiDark" class="themeCustomization-checkInput-label">Semi Oscuro</label>
+                </div>
+                </form>
+            </div>
+            <div class="divider"></div>
+            <div class="p-6">
+
+                <div class="flex items-center justify-between mt-5">
+                <h3 class="!mb-0">Invertir</h3>
+                <label id="rtl_ltr" class="relative inline-flex h-6 w-[46px] items-center rounded-full transition-all duration-150 cursor-pointer">
+                    <input type="checkbox" value="" class="sr-only peer">
+                    <span class="w-11 h-6 bg-gray-200 peer-focus:outline-none ring-0 rounded-full peer dark:bg-gray-900 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black-600"></span>
+                </label>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="p-6">
+                <div id="menuCollapse" class="flex items-center justify-between mt-5">
+                <h3 class="!mb-0">Colapsar menú</h3>
+                <label class="relative inline-flex h-6 w-[46px] items-center rounded-full transition-all duration-150 cursor-pointer">
+                    <input type="checkbox" value="" class="sr-only peer">
+                    <span class="w-11 h-6 bg-gray-200 peer-focus:outline-none ring-0 rounded-full peer dark:bg-gray-900 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black-500"></span>
+                </label>
+                </div>
+                <div id="menuHidden" class="!flex items-center justify-between mt-5">
+                <h3 class="!mb-0">Ocultar menú</h3>
+                <label id="menuHide" class="relative inline-flex h-6 w-[46px] items-center rounded-full transition-all duration-150 cursor-pointer">
+                    <input type="checkbox" value="" class="sr-only peer">
+                    <span class="w-11 h-6 bg-gray-200 peer-focus:outline-none ring-0 rounded-full peer dark:bg-gray-900 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black-500"></span>
+                </label>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!--Creando la barra de navegacion-->
+    <!-- FIN: Header -->
+
+    <!-- Contenido principal -->
+    <div class="content-wrapper transition-all duration-150 ltr:ml-[248px] rtl:mr-[248px]" id="content_wrapper">
+    <div class="page-content">
+        <div class="transition-all duration-150 container-fluid" id="page_layout">
+        <div id="content_layout">
+
+            <!-- Hero principal -->
+            <div class="rounded-2xl bg-cover bg-center pt-3 px-4 m-4 bg-no-repeat overflow-hidden shadow-lg mb-10" style="background-image: url('/assets/images/all-img/ecom2.jpeg'); height: 60vh;">
+            <div class="h-full w-full bg-black/50 flex items-center justify-center p-8">
+                <div class="text-center text-white space-y-4">
+                <h1 class="text-4xl font-bold drop-shadow">Bienvenido a la plataforma del IPN Zacatecas</h1>
+                <p class="text-lg">Gestiona las transacciones, crear, actualizar y eliminar.</p>
+                <a href="https://www.zacatecas.ipn.mx"
+                    class="inline-block mt-4 px-6 py-2 bg-white text-slate-800 font-semibold rounded-md hover:bg-slate-100 transition">
+                    Saber más
+                </a>
+                </div>
+            </div>
+            </div>
+
+            <!-- Tarjetas de acceso rápido -->
+             <div class="card pt-3 px-4 m-4">
+                <header class="card-header">
+                    <h4 class="card-title">Transacciones</h4>
+                    <div>
+                    <!-- BEGIN: Card Dropdown -->
+                    <div class="relative">
+                        <div class="dropdown relative">
+                        <button class="text-xl text-center block w-full " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="text-lg inline-flex h-6 w-6 flex-col items-center justify-center border border-slate-200 dark:border-slate-700
+            rounded dark:text-slate-400">
+        <iconify-icon icon="heroicons-outline:dots-horizontal"></iconify-icon>
+    </span>
+                        </button>
+                        <ul class=" dropdown-menu min-w-[120px] absolute text-sm text-slate-700 dark:text-white hidden bg-white dark:bg-slate-700
+        shadow z-[2] overflow-hidden list-none text-left rounded-lg mt-1 m-0 bg-clip-padding border-none">
+                            <li>
+                            <a href="#" class="text-slate-600 dark:text-white block font-Inter font-normal px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-600
+                dark:hover:text-white">
+                                Last 28 Days</a>
+                            </li>
+                            <li>
+                            <a href="#" class="text-slate-600 dark:text-white block font-Inter font-normal px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-600
+                dark:hover:text-white">
+                                Last Month</a>
+                            </li>
+                            <li>
+                            <a href="#" class="text-slate-600 dark:text-white block font-Inter font-normal px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-600
+                dark:hover:text-white">
+                                Last Year</a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                    <!-- END: Card Droopdown -->
+                    </div>
+                </header>
+            <div class="space-y-6 mt-10<div card-body p-6">
+            <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+                
+                <!-- Tarjeta: Listado -->
+                <a href="#" class="group transform transition-transform duration-300 hover:scale-105">
+                <div class="bg-slate-50 dark:bg-slate-900 rounded pt-3 px-4">
+                    <div class="p-4 text-center space-y-2">
+                    <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Listado</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-300">Visualizar transacciones</p>
+                    </div>
+                    <img src="/assets/images/all-img/lista.svg" alt="Listado" class="w-full h-28 object-contain p-3">
+                </div>
+                </a>
+
+                <div class="bg-slate-50 dark:bg-slate-900 rounded pt-3 px-4">
+                    <div class="text-sm text-slate-600 dark:text-slate-300 mb-[6px]">
+                        No. Transacciones
+                        </div>
+                        <div class="text-lg text-slate-900 dark:text-white font-medium mb-[6px]">
+                        123k
+                        </div>
+                        <div class="font-normal text-xs text-slate-600 dark:text-slate-300">
+                        <span class="text-warning-500">-60%
+                            </span>
+                        From last Week
+                        </div>
+                        <div class="mt-4">
+                        <div class="bar-chart" colors="#FA916B" height="44"></div>
+                    </div>
+                </div>
+                <!-- Tarjeta: Salir -->
+                <a href="#" class="group transform transition-transform duration-300 hover:scale-105">
+                <div class="bg-slate-50 dark:bg-slate-900 rounded pt-3 px-4">
+                    <div class="p-4 text-center space-y-2">
+                    <h3 class="text-lg font-semibold text-slate-900 dark:text-white">Salir</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-300">Cerrar sesión</p>
+                    </div>
+                    <img src="/assets/images/all-img/logout.png" alt="Salir" class="w-full h-28 object-contain p-3">
+                </div>
+                </a>
+
+            </div>
+            </div>
+            </div>
+            
+            <div class="card p-6 pt-3 px-4 m-4">
+            <div class="grid xl:grid-cols-4 lg:grid-cols-2 col-span-1 gap-3">
+
+            <!-- BEGIN: Group Chart4 -->
+
+
+            <div class="bg-warning-500 rounded-md p-4 bg-opacity-[0.15] dark:bg-opacity-25 relative z-[1]">
+                <div class="overlay absolute left-0 top-0 w-full h-full z-[-1]">
+                <img src="assets/images/all-img/shade-1.png" alt="" draggable="false" class="w-full h-full object-contain">
+                </div>
+                <span class="block mb-6 text-sm text-slate-900 dark:text-white font-medium">
+Cancelados
+</span>
+                <span class="block mb- text-2xl text-slate-900 dark:text-white font-medium mb-6">
+354
+</span>
+                <div class="flex space-x-2 rtl:space-x-reverse">
+                <div class="flex-none text-xl  text-primary-500">
+                    <iconify-icon icon="heroicons:arrow-trending-up"></iconify-icon>
+                </div>
+                <div class="flex-1 text-sm">
+                    <span class="block mb-[2px] text-primary-500">
+            25.67% 
+        </span>
+                    <span class="block mb-1 text-slate-600 dark:text-slate-300">
+            From last week
+        </span>
+                </div>
+                </div>
+            </div>
+
+            <div class="bg-info-500 rounded-md p-4 bg-opacity-[0.15] dark:bg-opacity-25 relative z-[1]">
+                <div class="overlay absolute left-0 top-0 w-full h-full z-[-1]">
+                <img src="assets/images/all-img/shade-2.png" alt="" draggable="false" class="w-full h-full object-contain">
+                </div>
+                <span class="block mb-6 text-sm text-slate-900 dark:text-white font-medium">
+Dépositos 
+</span>
+                <span class="block mb- text-2xl text-slate-900 dark:text-white font-medium mb-6">
+$86,954
+</span>
+                <div class="flex space-x-2 rtl:space-x-reverse">
+                <div class="flex-none text-xl  text-primary-500">
+                    <iconify-icon icon="heroicons:arrow-trending-up"></iconify-icon>
+                </div>
+                <div class="flex-1 text-sm">
+                    <span class="block mb-[2px] text-primary-500">
+            8.67%
+        </span>
+                    <span class="block mb-1 text-slate-600 dark:text-slate-300">
+            From last week
+        </span>
+                </div>
+                </div>
+            </div>
+
+            <div class="bg-primary-500 rounded-md p-4 bg-opacity-[0.15] dark:bg-opacity-25 relative z-[1]">
+                <div class="overlay absolute left-0 top-0 w-full h-full z-[-1]">
+                <img src="assets/images/all-img/shade-3.png" alt="" draggable="false" class="w-full h-full object-contain">
+                </div>
+                <span class="block mb-6 text-sm text-slate-900 dark:text-white font-medium">
+Transferencias
+</span>
+                <span class="block mb- text-2xl text-slate-900 dark:text-white font-medium mb-6">
+15%
+</span>
+                <div class="flex space-x-2 rtl:space-x-reverse">
+                <div class="flex-none text-xl  text-danger-500">
+                    <iconify-icon icon="heroicons:arrow-trending-down"></iconify-icon>
+                </div>
+                <div class="flex-1 text-sm">
+                    <span class="block mb-[2px] text-danger-500">
+            1.67%  
+        </span>
+                    <span class="block mb-1 text-slate-600 dark:text-slate-300">
+            From last week
+        </span>
+                </div>
+                </div>
+            </div>
+
+            <div class="bg-success-500 rounded-md p-4 bg-opacity-[0.15] dark:bg-opacity-25 relative z-[1]">
+                <div class="overlay absolute left-0 top-0 w-full h-full z-[-1]">
+                <img src="assets/images/all-img/shade-4.png" alt="" draggable="false" class="w-full h-full object-contain">
+                </div>
+                <span class="block mb-6 text-sm text-slate-900 dark:text-white font-medium">
+Retiros
+</span>
+                <span class="block mb- text-2xl text-slate-900 dark:text-white font-medium mb-6">
+654
+</span>
+                <div class="flex space-x-2 rtl:space-x-reverse">
+                <div class="flex-none text-xl  text-primary-500">
+                    <iconify-icon icon="heroicons:arrow-trending-up"></iconify-icon>
+                </div>
+                <div class="flex-1 text-sm">
+                    <span class="block mb-[2px] text-primary-500">
+            11.67%  
+        </span>
+                    <span class="block mb-1 text-slate-600 dark:text-slate-300">
+            From last week
+        </span>
+                </div>
+                </div>
+            </div>
+
+
+    </div>
+    </div>
+    </main>
+
+
+    
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/rt-plugins.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

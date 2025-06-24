@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<!-- Template Name: DashCode - HTML, React, Vue, Tailwind Admin Dashboard Template Author: Codeshaper Website: https://codeshaper.net Contact: support@codeshaperbd.net Like: https://www.facebook.com/Codeshaperbd Purchase: https://themeforest.net/item/dashcode-admin-dashboard-template/42600453 License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project. -->
+<html lang="zxx" dir="ltr" class="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Dashcode - HTML Template</title>
+  <link rel="icon" type="image/png" href="assets/images/logo/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- BEGIN: Theme CSS-->
+  <link rel="stylesheet" href="assets/css/rt-plugins.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <!-- End : Theme CSS-->
+  <script src="assets/js/settings.js" sync></script>
+</head>
+<body class=" font-inter dashcode-app" id="body_class">
+    <!-- [if IE]> <p class="browserupgrade"> You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security. </p> <![endif] -->
+    
+    <header class="bg-white shadow-sm py-4 px-6 flex items-center justify-between dark:bg-slate-800">
+    <!-- Logo -->
+    <div class="flex items-center space-x-2">
+        <img src="assets/images/logo/logo-ipn.svg" alt="Logo" class="h-8 w-8">
+        <span class="text-xl font-semibold text-gray-800"> UPIIZ</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex space-x-7 text-gray-600 font-medium dark:text-[#eee] block group">
+        <a href="#" class="hover:text-primary">Inicio</a>
+        <a href="#" class="hover:text-primary">Listado</a>
+    </nav>
+
+    <!-- Sign In Button -->
+    <div>
+        <a href="#"
+        class="bg-primary text-dark px-4 py-2 rounded-lg hover:bg-primary-dark transition duration-300 dark:text-[#eee]">
+        Iniciar sesión
+        </a>
+    </div>
+    </header>
+    <main class="app-wrapper">
+        <button class="fixed ltr:md:right-[-29px] ltr:right-0 rtl:left-0 rtl:md:left-[-29px] top-1/2 z-[888] translate-y-1/2 bg-slate-800 text-slate-50 dark:bg-slate-700 dark:text-slate-300 cursor-pointer transform rotate-90 flex items-center text-sm font-medium px-2 py-2 shadow-deep ltr:rounded-b rtl:rounded-t" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+      <iconify-icon class="text-slate-50 text-lg animate-spin" icon="material-symbols:settings-outline-rounded"></iconify-icon>
+      <span class="hidden md:inline-block ltr:ml-2 rtl:mr-2">Tema</span>
+    </button>
+
+        <!-- BEGIN: Settings Modal -->
+        <div class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-white dark:bg-slate-800 invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 top-0 ltr:right-0 rtl:left-0 border-none w-96" tabindex="-1" id="offcanvas" aria-labelledby="offcanvas">
+        <div class="offcanvas-header flex items-center justify-between p-4 pt-3 border-b border-b-slate-300">
+            <div>
+            <h3 class="block text-xl font-Inter text-slate-900 font-medium dark:text-[#eee]">
+                Configuración de tema
+            </h3>
+            <p class="block text-sm font-Inter font-light text-[#68768A] dark:text-[#eee]">Personaliza la página a tiempo real</p>
+            </div>
+            <button type="button" class="box-content text-2xl w-4 h-4 p-2 pt-0 -my-5 -mr-2 text-black dark:text-white border-none rounded-none opacity-100 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" data-bs-dismiss="offcanvas"><iconify-icon icon="line-md:close"></iconify-icon></button>
+        </div>
+        <div class="offcanvas-body flex-grow overflow-y-auto">
+            <div class="settings-modal">
+            <div class="p-6">
+                <h3 class="mt-4">Temas</h3>
+                <form class="input-area flex items-center space-x-8 rtl:space-x-reverse" id="themeChanger">
+                <div class="input-group flex items-center">
+                    <input type="radio" id="light" name="theme" value="light" class="themeCustomization-checkInput">
+                    <label for="light" class="themeCustomization-checkInput-label">Claro</label>
+                </div>
+                <div class="input-group flex items-center">
+                    <input type="radio" id="dark" name="theme" value="dark" class="themeCustomization-checkInput">
+                    <label for="dark" class="themeCustomization-checkInput-label">Oscuro</label>
+                </div>
+                <div class="input-group flex items-center">
+                    <input type="radio" id="semiDark" name="theme" value="semiDark" class="themeCustomization-checkInput">
+                    <label for="semiDark" class="themeCustomization-checkInput-label">Semi Oscuro</label>
+                </div>
+                </form>
+            </div>
+            <div class="divider"></div>
+            <div class="p-6">
+
+                <div class="flex items-center justify-between mt-5">
+                <h3 class="!mb-0">Invertir</h3>
+                <label id="rtl_ltr" class="relative inline-flex h-6 w-[46px] items-center rounded-full transition-all duration-150 cursor-pointer">
+                    <input type="checkbox" value="" class="sr-only peer">
+                    <span class="w-11 h-6 bg-gray-200 peer-focus:outline-none ring-0 rounded-full peer dark:bg-gray-900 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black-600"></span>
+                </label>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="p-6">
+                <div id="menuCollapse" class="flex items-center justify-between mt-5">
+                <h3 class="!mb-0">Colapsar menú</h3>
+                <label class="relative inline-flex h-6 w-[46px] items-center rounded-full transition-all duration-150 cursor-pointer">
+                    <input type="checkbox" value="" class="sr-only peer">
+                    <span class="w-11 h-6 bg-gray-200 peer-focus:outline-none ring-0 rounded-full peer dark:bg-gray-900 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black-500"></span>
+                </label>
+                </div>
+                <div id="menuHidden" class="!flex items-center justify-between mt-5">
+                <h3 class="!mb-0">Ocultar menú</h3>
+                <label id="menuHide" class="relative inline-flex h-6 w-[46px] items-center rounded-full transition-all duration-150 cursor-pointer">
+                    <input type="checkbox" value="" class="sr-only peer">
+                    <span class="w-11 h-6 bg-gray-200 peer-focus:outline-none ring-0 rounded-full peer dark:bg-gray-900 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-black-500"></span>
+                </label>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!--Creando la barra de navegacion-->
+    <!-- FIN: Header -->
+
+    <!-- Contenido principal -->
+    <div class="content-wrapper transition-all duration-150 ltr:ml-[248px] rtl:mr-[248px]" id="content_wrapper">
+    <div class="page-content">
+        <div class="transition-all duration-150 container-fluid" id="page_layout">
+        <div id="content_layout">
+
+            <!--Titulo y botones-->
+            
+            <!--Tabla-->
+          
+            <div class="card">
+                    <div class=" card-header noborder justify-between">
+                      <h4 class="card-title">Listado de Carreras
+                      </h4>
+                      <div>
+                      <button data-bs-toggle="modal" class="btn inline-flex justify-center btn-outline-primary "  data-bs-target="#default_modal">
+                            <span class="flex items-center">
+                                <iconify-icon class="text-xl ltr:mr-2 rtl:ml-2" icon="heroicons-outline:arrow-up-tray"></iconify-icon>
+                                <span>Exportar Excel</span>
+                            </span>
+                          </button>
+                          <button data-bs-toggle="modal" class="btn inline-flex justify-center btn-outline-success"  data-bs-target="#add_degree_modal">
+                            <span class="flex items-center">
+                                <iconify-icon class="text-xl ltr:mr-2 rtl:ml-2" icon="heroicons-outline:academic-cap"></iconify-icon>
+                                <span>Añadir</span>
+                            </span>
+                          </button>
+                    </div>
+                    </div>
+                    <div class="card-body px-6 pb-6">
+                      <div class="overflow-x-auto -mx-6 dashcode-data-table">
+                        <span class=" col-span-8  hidden"></span>
+                        <span class="  col-span-4 hidden"></span>
+                        <div class="inline-block min-w-full align-middle">
+                          <div class="overflow-hidden ">
+                              <table id="example" class="min-w-full divide-y divide-slate-100 table-fixed dark:divide-slate-700 data-table">
+                                  <thead class="bg-slate-200 dark:bg-slate-700">
+                                  <tr>
+                                      <th scope="col" class="table-th">Id</th>
+                                      <th scope="col" class="table-th">Cuenta</th>
+                                      <th scope="col" class="table-th">Monto</th>
+                                      <th scope="col" class="table-th">Tipo</th>
+                                      <th scope="col" class="table-th">Fecha</th>
+                                      <th scope="col" class="table-th">Acciones</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody class="bg-white divide-y divide-slate-100 dark:bg-slate-800 dark:divide-slate-700">
+                                  <!-- Fila de ejemplo -->
+                                  <tr id="renglon_1">
+                                      <td class="table-td">1</td>
+                                      <td class="table-td">
+                                    <span class="flex">
+                                      <span class="w-7 h-7 rounded-full ltr:mr-3 rtl:ml-3 flex-none">
+                                        <img src="assets/images/all-img/customer_1.png" alt="1" class="object-cover w-full h-full rounded-full" />
+                                      </span>
+                                      <span class="text-sm text-slate-600 dark:text-slate-300 capitalize">Cuenta123</span>
+                                    </span>
+                                      </td>
+                                      <td class="table-td">800.00</td>
+                                      <td class="table-td">
+                                          <div class="inline-block px-3 min-w-[90px] text-center mx-auto py-1 rounded-[999px] bg-opacity-25 text-success-500 bg-success-500">
+                                              retiro
+                                          </div>
+                                      </td>
+                                      <td class="table-td">2025-06-23</td>
+                                      <td class="table-td">
+                                          <div class="flex space-x-3 rtl:space-x-reverse">
+                                              <button class="action-btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#view_degree_modal" onclick="verTransaccion(1)">
+                                                  <iconify-icon icon="heroicons:eye"></iconify-icon>
+                                              </button>
+                                              <button class="action-btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#edit_degree_modal" onclick="seleccionarTransaccionActualizar(1)">
+                                                  <iconify-icon icon="heroicons:pencil-square"></iconify-icon>
+                                              </button>
+                                              <button class="action-btn btn-outline-danger" type="button" data-bs-toggle="modal" data-bs-target="#delete_degree_modal" onclick="seleccionarTransaccionEliminar(1, 'Cuenta123')">
+                                                  <iconify-icon icon="heroicons:trash"></iconify-icon>
+                                              </button>
+                                          </div>
+                                      </td>
+                                  </tr>
+                                  <!-- Más filas se agregan dinámicamente vía JS/AJAX -->
+                                  </tbody>
+                              </table>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+                <!--Creacion de modals-->
+                <!--Primer modal para añadir carrera formulario-->
+                <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="add_degree_modal" tabindex="-1" aria-labelledby="add_degree_modal" aria-hidden="true">
+                  <div class="modal-dialog relative w-auto pointer-events-none">
+                    <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                      <div class="relative bg-white rounded-lg shadow dark:bg-slate-700">
+                        <!-- Modal header -->
+                        <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-slate-600 bg-green-500">
+                          <h3 class="text-xl font-medium text-white dark:text-white capitalize">
+                            Añadir Transaccion
+                          </h3>
+                          <button type="button" class="text-white bg-transparent hover:bg-white/20 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-slate-600" data-bs-dismiss="modal">
+                            <iconify-icon icon="heroicons-outline:x" class="w-5 h-5"></iconify-icon>
+                            <span class="sr-only">Close modal</span>
+                          </button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="p-6 space-y-4">
+                            <form class="space-y-4">
+                                <!-- Cuenta -->
+                                <div class="input-area relative">
+                                    <label for="cuenta" class="form-label">Cuenta</label>
+                                    <div class="relative">
+                                        <input type="text" id="cuenta" class="form-control !pl-9" placeholder="Ingrese el número de cuenta" required>
+                                        <iconify-icon icon="heroicons-outline:credit-card" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                                    </div>
+                                </div>
+
+                                <!-- Tipo -->
+                                <div class="input-area relative">
+                                    <label for="tipo" class="form-label">Tipo de Transacción</label>
+                                    <div class="relative">
+                                        <select id="tipo" class="form-control !pl-9" required>
+                                            <option value="">Seleccione un tipo</option>
+                                            <option value="depósito">Depósito</option>
+                                            <option value="retiro">Retiro</option>
+                                            <option value="transferencia">Transferencia</option>
+                                        </select>
+                                        <iconify-icon icon="heroicons-outline:arrows-right-left" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                                    </div>
+                                </div>
+
+                                <!-- Monto -->
+                                <div class="input-area relative">
+                                    <label for="monto" class="form-label">Monto</label>
+                                    <div class="relative">
+                                        <input type="number" id="monto" step="0.01" class="form-control !pl-9" placeholder="Ingrese el monto" required>
+                                        <iconify-icon icon="heroicons-outline:currency-dollar" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                                    </div>
+                                </div>
+
+                                <!-- Fecha -->
+                                <div class="input-area relative">
+                                    <label for="fecha" class="form-label">Fecha</label>
+                                    <div class="relative">
+                                        <input type="date" id="fecha" class="form-control !pl-9" required>
+                                        <iconify-icon icon="heroicons-outline:calendar-days" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                                    </div>
+                                </div>
+
+                                <!-- Footer del modal -->
+                                <div class="flex items-center justify-end p-6 space-x-2 border-t border-slate-200 rounded-b dark:border-slate-600">
+                                    <button type="button" class="btn inline-flex justify-center btn-success bg-green-500 text-white" onclick="guardarTransaccion()">Añadir</button>
+                                    <button type="button" class="btn inline-flex justify-center btn-dark bg-gray-500 text-white" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Creando el modal para el formulario de editar-->
+                <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="edit_degree_modal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                  <div class="modal-dialog relative w-auto pointer-events-none">
+                    <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                      <div class="relative bg-white rounded-lg shadow dark:bg-slate-700">
+                        <!-- Modal header -->
+                        <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-slate-600 bg-blue-500">
+                          <h3 class="text-xl font-medium text-white dark:text-white capitalize">
+                            Editar Transacción
+                          </h3>
+                          <button type="button" class="text-white bg-transparent hover:bg-white/20 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-slate-600" data-bs-dismiss="modal">
+                            <iconify-icon icon="heroicons-outline:x" class="w-5 h-5"></iconify-icon>
+                            <span class="sr-only">Close modal</span>
+                          </button>
+                        </div>
+                        
+                        <!-- Modal body -->
+                        <div class="p-6 space-y-4">
+                            <form class="space-y-4" id="form-editar-transaccion">
+                                <!-- Cuenta -->
+                                <div class="input-area relative">
+                                    <label for="cuenta_editar" class="form-label">Cuenta</label>
+                                    <div class="relative">
+                                        <input type="text" id="cuenta_editar" class="form-control !pl-9" placeholder="Ingrese el número de cuenta" required>
+                                        <iconify-icon icon="heroicons-outline:credit-card" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                                    </div>
+                                </div>
+
+                                <!-- Tipo -->
+                                <div class="input-area relative">
+                                    <label for="tipo_editar" class="form-label">Tipo de Transacción</label>
+                                    <div class="relative">
+                                        <select id="tipo_editar" class="form-control !pl-9" required>
+                                            <option value="">Seleccione un tipo</option>
+                                            <option value="depósito">Depósito</option>
+                                            <option value="retiro">Retiro</option>
+                                            <option value="transferencia">Transferencia</option>
+                                        </select>
+                                        <iconify-icon icon="heroicons-outline:arrows-right-left" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                                    </div>
+                                </div>
+
+                                <!-- Monto -->
+                                <div class="input-area relative">
+                                    <label for="monto_editar" class="form-label">Monto</label>
+                                    <div class="relative">
+                                        <input type="number" id="monto_editar" step="0.01" class="form-control !pl-9" placeholder="Ingrese el monto" required>
+                                        <iconify-icon icon="heroicons-outline:currency-dollar" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                                    </div>
+                                </div>
+
+                                <!-- Fecha -->
+                                <div class="input-area relative">
+                                    <label for="fecha_editar" class="form-label">Fecha</label>
+                                    <div class="relative">
+                                        <input type="date" id="fecha_editar" class="form-control !pl-9" required>
+                                        <iconify-icon icon="heroicons-outline:calendar-days" class="absolute left-2 top-1/2 -translate-y-1/2 text-base text-slate-500"></iconify-icon>
+                                    </div>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="flex items-center justify-end p-6 space-x-2 border-t border-slate-200 rounded-b dark:border-slate-600">
+                                    <button type="button" onclick="actualizarTransaccion()" class="btn btn-primary inline-flex justify-center bg-blue-500 text-white hover:bg-blue-600">Guardar Cambios</button>
+                                    <button type="button" class="btn btn-dark inline-flex justify-center bg-gray-500 text-white hover:bg-gray-600" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Creando el modal para el formulario de eliminar-->
+                <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="delete_degree_modal" tabindex="-1" aria-labelledby="dangerModalLabel" aria-hidden="true">
+                  <div class="modal-dialog relative w-auto pointer-events-none">
+                    <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                      <div class="relative bg-white rounded-lg shadow dark:bg-slate-700">
+                        <!-- Modal header -->
+                        <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-slate-600 bg-red-500">
+                          <h3 class="text-xl font-medium text-white dark:text-white capitalize">
+                            Eliminar Transaccion
+                          </h3>
+                          <button type="button" class="text-white bg-transparent hover:bg-white/20 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-slate-600" data-bs-dismiss="modal">
+                            <iconify-icon icon="heroicons-outline:x" class="w-5 h-5"></iconify-icon>
+                            <span class="sr-only">Close modal</span>
+                          </button>
+                        </div>
+                        
+                        <!-- Modal body -->
+                          <!-- Modal body -->
+                          <div class="p-6 space-y-4">
+                              <div class="flex items-start">
+                                  <iconify-icon icon="heroicons-outline:exclamation-circle" class="text-red-500 text-2xl mr-3 mt-0.5"></iconify-icon>
+                                  <div>
+                                      <h6 class="text-lg font-medium text-slate-900 dark:text-white mb-2">
+                                          ¿Estás seguro de eliminar "<span id="nombre_transaccion_eliminar" class="font-bold">[transacción]</span>"?
+                                      </h6>
+                                      <p class="text-slate-600 dark:text-slate-400">
+                                          Esta acción eliminará permanentemente la transacción y no podrá recuperarse.
+                                      </p>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <!-- Modal footer -->
+                          <div class="flex items-center justify-end p-6 space-x-3 border-t border-slate-200 rounded-b dark:border-slate-600">
+                              <button type="button" class="btn inline-flex justify-center bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 dark:bg-slate-700 dark:text-white dark:border-slate-600" data-bs-dismiss="modal">
+                                  Cancelar
+                              </button>
+                              <button type="button" class="btn btn-danger inline-flex justify-center bg-red-600 text-white hover:bg-red-700 focus:ring-2 focus:ring-red-500" onclick="eliminarTransaccion()">
+                                  Sí, Eliminar
+                              </button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <!--Creando tabla para visualizar la informacion de cada carrera-->
+              <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="view_degree_modal" tabindex="-1" aria-labelledby="large_modal" aria-hidden="true">
+                <div class="modal-dialog modal-xl relative w-auto pointer-events-none">
+                  <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding
+                  rounded-md outline-none text-current">
+                    <div class="relative bg-white rounded-lg shadow dark:bg-slate-700">
+                      <!-- Modal header -->
+                      <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-slate-600 bg-black-500">
+                        <h3 class="text-xl font-medium text-white dark:text-white capitalize">
+                          Visualizar Transaferencia
+                        </h3>
+                        <button type="button" class="text-slate-400 bg-transparent hover:text-slate-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center
+                              dark:hover:bg-slate-600 dark:hover:text-white" data-bs-dismiss="modal">
+                          <svg aria-hidden="true" class="w-5 h-5" fill="#ffffff" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10
+                                      11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                          </svg>
+                          <span class="sr-only">Close modal</span>
+                        </button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="p-6 space-y-4">
+                        <h6 class="text-base text-slate-900 dark:text-white leading-6">
+                          [Numero de cuenta]
+                        </h6>
+                        <table class="min-w-full ">
+                          <thead class="bg-slate-200 dark:bg-slate-700">
+                            <tr>
+                              <th scope="col" class=" table-th ">
+                                    Id
+                                </th>
+
+                                <th scope="col" class=" table-th ">
+                                Cuenta
+                                </th>
+
+                                <th scope="col" class=" table-th ">
+                                Monto
+                                </th>
+
+                                <th scope="col" class=" table-th ">
+                                Tipo
+                                </th>
+                                <th scope="col" class=" table-th ">
+                                Fecha
+                                </th>
+
+                            </tr>
+                          </thead>
+                          <tbody class="bg-white divide-y divide-slate-100 dark:bg-slate-800 dark:divide-slate-700">
+
+                            <tr>
+                              <td class="table-td">1</td>
+                              <td class="table-td">Sistemas Computacionales</td>
+                              <td class="table-td ">8</td>
+                              <td class="table-td ">
+                                Retiro
+                              </td>
+                              <td class="table-td ">
+                                00/00/00
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="flex items-center justify-end p-6 space-x-2 border-t border-slate-200 rounded-b dark:border-slate-600">
+                        <button data-bs-dismiss="modal" class="btn inline-flex justify-center text-white bg-black-500">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </main>
+
+    <script src="assets/js/sistema/transacciones.js"></script>
+    
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/rt-plugins.js"></script>
+    <script src="assets/js/app.js"></script>
+</html>
